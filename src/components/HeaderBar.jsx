@@ -1,15 +1,11 @@
-
 import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
 import { Menu } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
-import Logout from './Logout';
 import Login from './Login';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
-import Avatar from '@mui/material/Avatar';
-import { Person } from '@mui/icons-material';
+
 import Profile from './Profile';
+import Setting from './Setting';
+import Autosave from './Autosave';
 const Header = styled(AppBar)`
   z-index: 1201;
   background: #fff;
@@ -39,11 +35,15 @@ const HeaderBar = ({ open, handleDrawer }) => {
         </IconButton>
         <img src={logo} alt="logo" style={{width: 30}} />
         <Heading>Keep</Heading>
-        <Heading style={{marginLeft:'700px'}}> <Login />  </Heading>
-        <Heading style={{marginLeft:'50px'}}> <Logout />  </Heading>
-        <Heading > <Profile />  </Heading>
+        <Heading></Heading>
+        <Heading style={{marginLeft:'600px'}}> <Login />  </Heading>
+        <Heading >  </Heading>
+        <Heading > <Setting />
+        
+        </Heading>
         {/* <Heading style={{marginLeft:'600px'}}>   <Login />  </Heading > */}
-       
+          <Profile />
+          
       </Toolbar>
     </Header>
   )
